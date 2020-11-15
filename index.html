@@ -9,7 +9,7 @@
     <body>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item active" aria-current="page">Coin Market Cap</li>
+              <li class="breadcrumb-item1 active" aria-current="page">Coin Market Cap</li>
             </ol>
           </nav>
         
@@ -21,7 +21,7 @@
         <script type="text/javascript">
             //My api key
             var apikey = {
-                key: 'SUA API KEY AQUI:)'
+                key: '8a40b54d-4889-447c-8860-e12d46370d8c'
             }
 
         //GET Fetch Requisition
@@ -34,20 +34,26 @@
             .then((api) => {
                 
                 var texto = "";
+                var array = ['August 18, 2007','April 18, 2011',
+                            'May 07, 2011', 'October 7, 2011',
+                            'August 12, 2012','October 26, 2012',
+                            'December 21, 2012', 'February 09, 2013',
+                            'April 16, 2013', 'May 02, 2013'
+                            ];
+                
                 // Get 10 coins and symbols 
                 for(let i = 0; i < 10; i++){
-
-
-
+                
                 //Show API information
 
                    texto = texto + `
                   
                     <div class="media">
-                        <img src="coin.jpg" class="align-self-center mr-3" alt="coin" width="100" height="60">
+                        <img src="bitcoin.gif" class="align-self-center mr-3" alt="coin" width="100" height="70">
                         <div class="media-body">
-                        <h5 class="mt-2">${api.data[i].name}</h5>
-                        <p>${api.data[i].symbol}</p>
+                            <h5 class="mt-2">${api.data[i].name}</5>
+                            <h3> First historical date: ${array[i]}</h3>
+                            <p>${api.data[i].symbol}</p>
                         </div>
                     </div>
                
